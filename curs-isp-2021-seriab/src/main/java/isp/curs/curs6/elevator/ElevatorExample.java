@@ -62,14 +62,18 @@ class ElevatorController{
     
     public void control() throws InterruptedException{
         Command c = null;
-        if(queue.size()>0)
-            c = queue.removeFirst();
         
         
-        // Optional - se utilizeaza pentru a cerea un cod mai usor de citi si pentru a evita utlizarea lui null
-        Optional<Command> c2 = queue.stream().findFirst();
+        //if(queue.size()>0)
+        //    c = queue.removeFirst();
         
+        // Optional - se utilizeaza pentru a evita utilizarea lui null
+        Optional<Command> c2 = queue.stream().findFirst(); //using stream to get first element. 
+        
+        //if(c!=null){
         if(c2.isPresent()){
+            c = c2.get(); //get value from Optional
+            queue.remove(c); //remove command from queue so that next time we do not execute it again!
             if(c.getTargetFloor()> e.getFloor()){
                 System.out.println("Move elevator UP!");
                 e.move(c.getTargetFloor());
