@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author mihai.hulea
  */
-public class SerializableVehicleUtil {
+public class SerializableExample {
    static void writeVehicle(Vehicle v, String destinationFile) throws IOException{
        try(ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(destinationFile))){
            os.writeObject(v);
