@@ -18,8 +18,8 @@ public class Teste {
         //FilesAndFoldersUtil.createFolder("c:\\curs7");
         //SerializableVehicleUtil.writeVehicle(v, "c:\\curs7\\vehicle1.dat");
     
-        Vehicle c = SerializableVehicleUtil.readVehicle("c:\\curs7\\vehicle1.dat");
-        System.out.println(c);
+//        Vehicle c = SerializableVehicleUtil.readVehicle("c:\\curs7\\vehicle1.dat");
+ //       System.out.println(c);
     }
  
 }
